@@ -12,6 +12,12 @@
   <tbody>
     <% @offenses.each do |offense| %>
       <tr>
+        <td class='header'>IP address</td>
+        <td class='header'>Date</td>
+      </tr>
+      <tr>
+        <td><%= offense.ip_address %></td>
+        <td><%= offense.created_at %></td>
         <td><%= link_to 'Show', offense %></td>
         <td><%= link_to 'Edit', edit_offense_path(offense) %></td>
         <td><%= link_to 'Destroy', offense, method: :delete, data: { confirm: 'Are you sure?' } %></td>
